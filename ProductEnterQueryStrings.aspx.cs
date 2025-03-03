@@ -16,7 +16,20 @@ namespace QueryString5834255
 
         protected void btnConfirm_Click(object sender, EventArgs e)
         {
-            
+            //Go to the confirmation page with the encoded URL
+            Response.Redirect
+                (
+                "ProductConfirmQueryStrings.aspx" +
+                "?ddlCategory=" + ddlCategory.SelectedValue +
+                "&ddlSupplier=" + ddlSupplier.SelectedValue +
+                "&strProduct=" + txtProduct.Text +
+                "&strDescription=" + txtDescription.Text +
+                "&strImage=" + txtImage.Text +
+                "&decPrice=" + txtPrice.Text +
+                "&bytNumberInStock=" + txtNumberInStock.Text +
+                "&bytNumberOnOrder=" + txtNumberOnOrder.Text +
+                "&bytReorderLevel=" + txtReorderLevel.Text
+                );
         }
     }
 }
